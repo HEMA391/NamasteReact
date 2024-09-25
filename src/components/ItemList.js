@@ -1,7 +1,14 @@
+import { useDispatch } from "react-redux";
 import { CDN_URL } from "../utils/constants";
+import { addItem } from "../utils/store/cartSlice";
 
 const ItemList = ({ items }) => {
-  console.log(items);
+  const dispatch = useDispatch();
+
+  const handleAddItem = (item) => {
+    dispatch(addItem(item));
+  };
+
   return (
     <div>
       {items.map((item) => {
@@ -49,10 +56,12 @@ const ItemList = ({ items }) => {
                     border: "1px solid lightgrey",
                     borderRadius: "5px",
                     fontSize: "12px",
+                    cursor: "pointer",
                   }}
                   onClick={(e) => {
                     e.stopPropagation(); // Prevent the click event from bubbling up
                     // Handle the button click event here
+                    handleAddItem(item);
                   }}
                 >
                   Add
