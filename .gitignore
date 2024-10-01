@@ -4,6 +4,7 @@ node_modules/
 # Parcel cache and output files
 .parcel-cache/
 dist/
+/coverage
 
 # Logs
 npm-debug.log*

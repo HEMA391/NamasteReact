@@ -51,6 +51,8 @@ const Header = () => {
                   }}
                 />
                 <span
+                  title="cartSize"
+                  data-testid="cartSize"
                   style={{
                     position: "absolute",
                     top: "-5px",

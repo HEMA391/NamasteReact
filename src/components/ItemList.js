@@ -14,6 +14,7 @@ const ItemList = ({ items }) => {
       {items.map((item) => {
         return (
           <div
+            data-testid="foodItems"
             key={item.card.info.id}
             style={{
               padding: "8px",

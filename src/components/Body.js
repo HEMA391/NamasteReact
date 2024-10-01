@@ -46,6 +46,7 @@ const Body = () => {
       <div className="filter">
         <div className="search">
           <input
+            data-testid="searchInput"
             type="text"
             className="search-box"
             value={searchText}
@@ -84,7 +85,7 @@ const Body = () => {
             key={restaurant.info.id}
             to={"/restaurants/" + restaurant.info.id}
           >
-            {console.log(restaurant)}
+            {/*console.log(restaurant)*/}
             {restaurant.info.isOpen ? (
               <RestaurantCardPromoted restaurant={restaurant} />
             ) : (
